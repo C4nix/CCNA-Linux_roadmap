@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مسیر ۱۴ هفته‌ای CCNA + Linux</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:#0a1230;--bg:#eef2fb;--card:#fff;--ink:#0f1a33;--mute:#56637f;--line:#dde3f1;--chip:#f0f3fb;--sh:0 10px 30px -12px #1b2a5a55}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080d1f;--card:#111a35;--ink:#e8edfb;--mute:#9aa8c9;--line:#243259;--chip:#1a2650;--sh:0 10px 30px -12px #000}}
+:root[data-theme="dark"]{--bg:#080d1f;--card:#111a35;--ink:#e8edfb;--mute:#9aa8c9;--line:#243259;--chip:#1a2650;--sh:0 10px 30px -12px #000}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.7 "Vazirmatn",Tahoma,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;gap:6px;overflow-x:auto;padding:8px 12px;background:#0a1230f2;backdrop-filter:blur(8px)}
+nav a{flex:none;min-width:34px;text-align:center;color:#fff;border:1px solid #ffffff44;border-radius:99px;padding:0 12px;font-weight:800;font-size:13.5px}
+nav a.on{background:#fff;color:#0a1230}
+nav a.ok::after{content:" ✓";color:#22c55e}
+.hero{background:radial-gradient(800px 320px at 85% -10%,#3b5bdb66,transparent),radial-gradient(600px 300px at 5% 110%,#7c3aed66,transparent),#0a1230;color:#fff;padding:26px 16px 80px}
+.hin{max-width:1100px;margin:0 auto;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.tt{flex:1;min-width:260px}
+.tt h1{margin:0;font-size:clamp(28px,6vw,54px);font-weight:900;line-height:1.3}
+.tt h1 b{background:linear-gradient(90deg,#fde68a,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tt .sub{font-weight:600;color:#dbe4ff;margin-top:4px}
+.tt p{margin:8px 0 0;color:#a9b8e8}
+.ring{width:150px;height:150px;border-radius:50%;background:conic-gradient(#fbbf24 calc(var(--p)*1%),#ffffff26 0);display:grid;place-items:center;position:relative;text-align:center}
+.ring::before{content:"";position:absolute;inset:12px;border-radius:50%;background:#0a1230}
+.ring div{position:relative;line-height:1.3}
+.ring b{font-size:28px;font-weight:900;display:block}
+.ring small{font-size:11.5px;color:#c9d5ff}
+main,.grid{max-width:1100px;margin:0 auto;padding:0 14px}
+.home{margin-top:-52px;position:relative}
+h2{font-size:19px;font-weight:900;margin:26px 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:12px 15px;font-size:13.5px}
+.box b{display:block;font-size:14.5px;font-weight:800}
+.box span{color:var(--mute)}
+.st i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#2563eb;color:#fff;font-weight:800;font-size:12px;margin-left:6px}
+.wk{display:block;overflow:hidden;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:var(--sh);transition:transform .2s}
+.wk:hover{transform:translateY(-3px)}
+.wk .h{background:linear-gradient(135deg,var(--c),var(--c2));color:#fff;padding:10px 14px;font-weight:900;display:flex;justify-content:space-between}
+.wk .b{padding:8px 14px 12px;font-size:13px}
+.wk .b strong{display:block;font-size:14.5px}
+.pb{height:9px;border-radius:9px;background:#ffffff40;overflow:hidden;margin:8px 0 4px}
+.wk .pb{background:var(--chip)}
+.pb s{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--c,#fbbf24),var(--c2,#fde68a))}
+.note{border:2px dashed var(--line);border-radius:16px;padding:10px 14px;font-size:13.5px;margin-top:12px}
+.rs{background:#dc2626;color:#fff;border:0;border-radius:99px;padding:3px 16px;font:inherit;font-weight:700;cursor:pointer;margin:16px 0 30px}
+.wh{background:linear-gradient(135deg,var(--c),var(--c2));color:#fff;padding:20px 16px 70px}
+.wi{max-width:1100px;margin:0 auto}
+.wi small{font-weight:700;opacity:.9}
+.wi h1{margin:0;font-size:clamp(26px,5vw,42px);font-weight:900}
+.wi span{font-size:13px;font-weight:700}
+.goal{margin-top:10px;background:#ffffff26;border:1px solid #ffffff55;border-radius:14px;padding:8px 14px;font-weight:600;font-size:14px}
+.grid{margin-top:-52px;position:relative;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);overflow:hidden}
+.dh{background:linear-gradient(135deg,var(--c),var(--c2));color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.dh h3{margin:0;font-size:18px;font-weight:900;line-height:1.3}
+.dh small{font-weight:600;font-size:12.5px}
+.tm{background:#ffffff2e;border:1px solid #ffffff55;border-radius:12px;padding:1px 10px;font-size:12.5px;font-weight:800;white-space:nowrap}
+.tk{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-top:1px dashed var(--line);font-size:13.5px;cursor:pointer}
+.tk:first-of-type{border-top:0}
+.tk input{flex:none;width:22px;height:22px;margin:2px 0 0;accent-color:var(--c);cursor:pointer}
+.tk span{flex:1}
+.tk em{flex:none;font-style:normal;font-size:11.5px;font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 13%,var(--card));border-radius:99px;padding:0 9px;white-space:nowrap}
+.tk input:checked+span{opacity:.5;text-decoration:line-through}
+.day.done{outline:2px solid var(--c)}
+.pn{max-width:1100px;margin:22px auto 34px;padding:0 14px;display:flex;justify-content:space-between;gap:10px}
+.pn a{background:linear-gradient(135deg,var(--c),var(--c2));color:#fff;font-weight:800;border-radius:99px;padding:4px 18px}
+:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.syn p{margin:0 0 8px}.syn input{width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--chip);color:var(--ink);font:inherit;direction:ltr}.bt{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.bt button,.fl{background:linear-gradient(135deg,#2563eb,#38bdf8);color:#fff;border:0;border-radius:99px;padding:3px 16px;font:inherit;font-weight:700;font-size:13px;cursor:pointer}.ss{color:var(--mute);font-size:12.5px}nav .ss{color:#c9d5ff;white-space:nowrap;align-self:center;margin-inline-start:auto;padding-inline:6px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const R=[
+["شروع مسیر","Foundations","Packet Tracer، CLI پایه و مسیر یک ping در LAN",[
+["1، 2","Network Devices، Interfaces & Cables","ج۱ ف۲–۳","نصب Packet Tracer؛ Labهای Day 1 و 2 را خودت بساز"],
+["3","OSI و TCP/IP","ج۱ ف۴","Lab: OSI Model؛ Wireshark: اولین capture روی Fedora"],
+["4","Intro to the CLI","ج۱ ف۵","Lab: Basic Device Security؛ دستورات show را تکرار کن"],
+["5","Ethernet LAN Switching (1)","ج۱ ف۶","MAC address و فریم را روی کاغذ بکش"]],
+["Linux: شروع","Shotts: ف۱ تا ۴ (Shell، Navigation، فایل‌ها)","Bandit: Level 0 تا 5"],
+["Lab هفته","PC–Switch–PC: IP بده، ping بزن، ARP و ICMP را در Wireshark ببین"],
+["بازیابی","بدون جزوه: ping در یک LAN دقیقاً چه می‌شود؟"]],
+["Switching و IPv4","Ethernet + IPv4","پیکربندی IP و Interface و خواندن هدر IPv4",[
+["6","Ethernet LAN Switching (2)","ج۱ ف۶","Lab: Ethernet LAN Switching؛ show mac address-table"],
+["7","IPv4 Addressing (1)","ج۱ ف۷","۲۰ تمرین باینری؛ کلاس‌ها و IP خصوصی"],
+["8، 10","IPv4 Addressing (2) و IPv4 Header","ج۱ ف۷–۸","Lab: Configuring IPv4 Addresses"],
+["9","Switch Interfaces","ج۱ ف۸","Lab: Configuring Switch Interfaces"]],
+["Linux: Command","Shotts: ف۵ و ۶ (Commands، Redirection)","Bandit: Level 5 تا 10"],
+["Lab هفته","شبکه‌ی دو Switch با IPهای مختلف؛ خطای Duplex/Speed عمداً بساز و رفع کن"],
+["بازیابی","تفاوت Switch Interface و Router Interface را توضیح بده"]],
+["Subnetting","IPv4 Subnetting + Static Routing","Subnetting بدون ماشین‌حساب و Static Route",[
+["13","Subnetting (1)","ج۱ ف۱۱","۱۰ مسئله: Network، Broadcast، Range"],
+["14","Subnetting (2)","ج۱ ف۱۱","۱۵ مسئله‌ی زمان‌دار"],
+["15","Subnetting (3) و VLSM","ج۱ ف۱۱","Lab: VLSM؛ ۱۰ مسئله VLSM"],
+["11","Routing Fundamentals و Static Routing","ج۱ ف۹","Lab: Static Routes و Troubleshooting Static Routes"]],
+["Linux: Shell","Shotts: ف۷ و ۸ (Expansion، ترفندهای کیبورد)","Bandit: Level 10 تا 15"],
+["Lab هفته","طرح آدرس‌دهی سه Subnet را در PT اجرا کن + ۳۰ مسئله‌ی Subnetting"],
+["بازیابی","۲۰ سؤال Subnetting بدون ماشین‌حساب"]],
+["VLAN","VLANs + Trunking","ساخت VLAN، Trunk و Inter-VLAN routing",[
+["12، 16","Life of a Packet و VLANs (1)","ج۱ ف۱۰ و ۱۲","Lab: Life of a Packet و VLANs (1)"],
+["17","VLANs (2)","ج۱ ف۱۲","Lab: VLANs (2) و Trunk"],
+["18","VLANs (3)","ج۱ ف۱۲","Lab: Multilayer Switching"],
+["19","DTP و VTP","ج۱ ف۱۳","Lab: DTP/VTP"]],
+["Linux: Permissions","Shotts: ف۹ (Permissions)","chmod و chown؛ Bandit: Level 15 تا 20"],
+["Lab هفته","دو VLAN با Trunk و Router-on-a-stick؛ ارتباط بین VLANها را تست کن"],
+["بازیابی","VLAN با Subnet چه فرقی دارد؟ Trunk چه می‌کند؟"]],
+["STP و EtherChannel","Spanning Tree + EtherChannel","خواندن STP و ساخت شبکه‌ی بدون Loop",[
+["20","STP (1)","ج۱ ف۱۴","Lab: Analyzing STP؛ Root Bridge را پیدا کن"],
+["21","STP (2)، PortFast و BPDU Guard","ج۱ ف۱۴","Lab: Configuring STP"],
+["22","Rapid STP","ج۱ ف۱۵","Lab: Rapid STP"],
+["23","EtherChannel","ج۱ ف۱۶","Lab: EtherChannel"]],
+["Linux: Process","Shotts: ف۱۰ (Processes)","top، ps، kill، jobs؛ Bandit: Level 20 تا 25"],
+["Lab هفته","سه Switch با RSTP و EtherChannel؛ Root را جابه‌جا کن و یک Link را قطع کن"],
+["بازیابی","STP چه مشکلی را حل می‌کند و RSTP چه فرقی دارد؟"]],
+["Routing و OSPF","Dynamic Routing + OSPF","پیاده‌سازی OSPF و توضیح انتخاب مسیر",[
+["24","Dynamic Routing","ج۱ ف۱۷","Lab: Floating Static Routes"],
+["26","OSPF (1)","ج۱ ف۱۸","Lab: Configuring OSPF (1)"],
+["27","OSPF (2)","ج۱ ف۱۸","Lab: Configuring OSPF (2)"],
+["28","OSPF (3)","ج۱ ف۱۸","Lab: Configuring OSPF (3)"]],
+["Linux: محیط","Shotts: ف۱۱ و ۱۲ (Environment، vi)","Bandit: Level 25 تا 30"],
+["Lab هفته","سه Router با OSPF؛ یک Route را حذف کن و با show ip route رفع کن"],
+["بازیابی","Router چطور مسیر را انتخاب می‌کند؟ (Longest prefix، Metric، AD)"]],
+["FHRP، TCP و IPv6","FHRP + TCP/UDP + IPv6","HSRP، تحلیل TCP handshake و IPv6 پایه",[
+["29","First Hop Redundancy Protocols","ج۱ ف۱۹","Lab: Configuring HSRP"],
+["30","TCP و UDP","ج۱ ف۲۲","Lab: Wireshark Demo"],
+["31","IPv6 (1)","ج۱ ف۲۰","Lab: Configuring IPv6 (1)"],
+["32","IPv6 (2)","ج۱ ف۲۰–۲۱","Lab: Configuring IPv6 (2)"]],
+["Linux: Networking","Shotts: ف۱۶ (Networking)","ip، ss، ping، traceroute؛ Bandit: Level 30 تا 33"],
+["Lab هفته","Wireshark روی Fedora: TCP three-way handshake و ICMP را بگیر و توضیح بده"],
+["بازیابی","TCP handshake را قدم‌به‌قدم توضیح بده"]],
+["IPv6 و ACL","IPv6 + ACL + DNS","IPv6 کامل و ACL با تست واقعی",[
+["33","IPv6 (3)","ج۱ ف۲۱","Lab: Configuring IPv6 (3)"],
+["34","Standard ACLs","ج۱ ف۲۳","Lab: Standard ACLs"],
+["35","Extended ACLs","ج۱ ف۲۴","Lab: Extended ACLs"],
+["36، 38","CDP و LLDP، DNS","ج۲ ف۱ و ۳","Lab: CDP & LLDP و DNS"]],
+["Linux: جست‌وجو و بسته‌ها","Shotts: ف۱۷ و ۱۴ (find، Package Management)","find و dnf روی Fedora"],
+["Lab هفته","شبکه‌ای با ACL: سرویس‌ها را اجازه/منع کن و با ping و Wireshark تست کن"],
+["بازیابی","Standard در برابر Extended ACL؛ ACL را کجا باید گذاشت؟"]],
+["سرویس‌های شبکه","DHCP · NTP · SSH · Syslog","DHCP، DNS، NTP، Syslog و SSH در یک شبکه",[
+["37، 39","NTP و DHCP","ج۲ ف۲ و ۴","Lab: NTP و DHCP"],
+["40، 41","SNMP و Syslog","ج۲ ف۶–۷","Lab: SNMP و Syslog"],
+["42، 43","SSH، FTP و TFTP","ج۲ ف۵ و ۸","Lab: SSH و FTP/TFTP"],
+["44","NAT (1)","ج۲ ف۹","Lab: Static NAT"]],
+["Linux: Text","Shotts: ف۱۹ و ۲۰ (Regex، Text Processing)","grep، sed، awk، cut، sort، uniq روی یک لاگ"],
+["Lab هفته","DHCP + DNS + Syslog + SSH؛ در Wireshark روی Fedora، DHCP و DNS را بگیر"],
+["بازیابی","بنویس: DNS از لحظه‌ی زدن example.com چه مراحلی دارد؟"]],
+["NAT، QoS و امنیت","NAT + QoS + Security Basics","NAT/PAT، QoS و مفاهیم پایه‌ی امنیت",[
+["45","NAT (2)","ج۲ ف۹","Lab: Dynamic NAT"],
+["46","QoS (1)","ج۲ ف۱۰","Lab: Voice VLANs"],
+["47","QoS (2)","ج۲ ف۱۰","Lab: QoS"],
+["48","Security Fundamentals","ج۲ ف۱۱","Lab: Kali Linux Demo"]],
+["Bash (1)","Shotts: ف۲۴ تا ۲۷ (اولین اسکریپت، if)","اسکریپتی بنویس که IP، Gateway و DNS را نشان بدهد"],
+["Lab هفته","PAT روی Router و Voice VLAN؛ با show ip nat translations دنبال کن"],
+["بازیابی","NAT/PAT را با مثال توضیح بده؛ Threat، Vulnerability و Exploit را تعریف کن"]],
+["امنیت Layer 2","Port Security · DHCP Snooping · DAI","امن‌سازی Layer 2",[
+["49","Port Security","ج۲ ف۱۲","Lab: Port Security"],
+["50","DHCP Snooping","ج۲ ف۱۳","Lab: DHCP Snooping"],
+["51","Dynamic ARP Inspection","ج۲ ف۱۴","Lab: Dynamic ARP Inspection"],
+["52، 53","LAN و WAN Architectures","ج۲ ف۱۵–۱۶","Lab: STP & FHRP Synchronization و GRE Tunnels"]],
+["Bash (2)","Shotts: ف۲۸، ۲۹، ۳۲، ۳۳ (read، while، پارامترها، for)","اسکریپت هفته‌ی قبل را با حلقه و آرگومان بهتر کن"],
+["Lab هفته","Port Security + DHCP Snooping + DAI روی یک شبکه؛ رفتار را قبل و بعد مقایسه کن"],
+["بازیابی","ARP Spoofing چیست و DAI چطور جلویش را می‌گیرد؟"]],
+["Wireless و Cloud","Wireless + Virtualization","مفاهیم Wireless و Cloud و SSH با کلید روی Fedora",[
+["54","Virtualization و Cloud","ج۲ ف۱۷","Lab: Oracle VirtualBox"],
+["55، 56","Wireless Fundamentals و Architectures","ج۲ ف۱۸–۱۹","نقشه‌ی مفهومی AP، WLC و SSID"],
+["57","Wireless Security","ج۲ ف۲۰","جدول WPA2 و WPA3 و حمله‌ها"],
+["58","Wireless Configuration","ج۲ ف۲۱","Lab: Wireless LANs"]],
+["Linux: سرویس‌ها و امنیت","man systemctl، journalctl، ssh-keygen و مستندات firewalld","SSH با کلید و یک قانون firewalld روی Fedora"],
+["Lab هفته","یک Fedora VM در VirtualBox؛ SSH با کلید و firewalld را تنظیم و از Host تست کن"],
+["بازیابی","AP مستقل در برابر WLC؛ WPA2 در برابر WPA3"]],
+["Automation و Mega Lab","Automation + CCNA Mega Lab","درک Automation و ساختن CCNA Mega Lab",[
+["59","Intro to Network Automation","ج۲ ف۲۲","خلاصه‌ی یک‌صفحه‌ای"],
+["60، 61","JSON/XML/YAML و REST APIs","ج۲ ف۲۴ و ۲۳","یک JSON نمونه را بخوان و فیلدها را توضیح بده"],
+["62، 63","SDN و Ansible/Puppet/Chef","ج۲ ف۲۲ و ۲۵","نمودار Traditional در برابر Controller-based"],
+["—","CCNA Mega Lab (156 دقیقه)","ویدئوی رسمی Jeremy","اول فقط نگاه کن و topology را یادداشت کن"]],
+["Python و شبکه","Python tutorial و Socket HOWTO (docs.python.org)","TCP Client و Server ساده با socket"],
+["Lab هفته","CCNA Mega Lab: خودت از صفر بساز (ویدئو فقط برای بن‌بست)"],
+["بازیابی","مرور کل CCNA با Anki و ۱۰ سؤال شفاهی"]],
+["امنیت‌محور و پایان","Security-Oriented Networking","Wireshark، Nmap و عیب‌یابی سناریویی",[
+["—","Wireshark عمیق","Chris Greer و Wireshark User Guide","ARP، DNS، TCP handshake، HTTP و TLS را ببین"],
+["—","Nmap","Nmap Reference Guide (فقط شبکه‌ی خودت)","-sn، -sT/-sS، -sV، -O؛ هر scan را در Wireshark ببین"],
+["—","Troubleshooting (1)","ip، route، ss، dig، curl، traceroute","سناریو: سیستم به اینترنت وصل نمی‌شود"],
+["—","Troubleshooting (2)","systemctl، journalctl، ss، ps","سناریو: سرویسی روی Linux در دسترس نیست"]],
+["Lab نهایی: Build","طراحی شبکه از صفر","شبکه‌ی Enterprise کوچک بساز و مستند کن"],
+["Lab نهایی: Break","پنج خرابی عمدی (IP، Gateway، ACL، Route، سرویس)؛ پیدا و رفع کن و گزارش را در GitHub بگذار"],
+["ارزیابی نهایی","۱۰ سؤال شفاهی: ARP، DNS، TCP، Routing، VLAN، NAT، ACL، DHCP، Process، Permission"]]
+];
+const W=R.map(r=>({n:r[0],e:r[1],g:r[2],d:[...r[3].map(t=>[t[1],t[0]=="—"?t[1]+": "+t[2]:"Jeremy Day "+t[0]+": "+t[1]+" · کتاب "+t[2],t[3]]),[r[4][0],r[4][1],r[4][2]],[r[5][0],r[5][1]],[r[6][0],r[6][1]]]}));
+const CL=[["#2563eb","#38bdf8"],["#059669","#34d399"],["#7c3aed","#c084fc"],["#ea580c","#fbbf24"],["#0891b2","#2dd4bf"],["#dc2626","#fb7185"],["#4f46e5","#818cf8"],["#be185d","#f472b6"],["#d97706","#facc15"],["#0f766e","#4ade80"],["#0ea5e9","#a78bfa"],["#16a34a","#a3e635"],["#e11d48","#fb923c"],["#334155","#64748b"]];
+const DN=["شنبه","یکشنبه","دوشنبه","سه‌شنبه","چهارشنبه","پنجشنبه","جمعه"];
+const fa=n=>String(n).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]).replace(".","٫");
+const app=document.getElementById("app");
+let S=new Set();try{S=new Set(JSON.parse(localStorage.getItem("c14")||"[]"))}catch(e){}
+let TOK="",GID="",TS=0,ST="";
+try{TOK=localStorage.getItem("c14tok")||"";GID=localStorage.getItem("c14gid")||"";TS=+localStorage.getItem("c14t")||0}catch(e){}
+const save=q=>{if(!q)TS=Date.now();try{localStorage.setItem("c14",JSON.stringify([...S]));localStorage.setItem("c14t",TS)}catch(e){}};
+const FN="c14-progress.json";
+const api=async(p,o={})=>{const r=await fetch("https://api.github.com"+p,{...o,headers:{Authorization:"Bearer "+TOK,Accept:"application/vnd.github+json","Content-Type":"application/json"}});if(!r.ok)throw new Error(r.status);return r.json()};
+const setST=t=>{ST=t;document.querySelectorAll(".ss").forEach(e=>e.textContent=t)};
+const stash=()=>{try{localStorage.setItem("c14gid",GID)}catch(e){}};
+async function push(){if(!TOK)return;setST("در حال ذخیره…");
+ try{const body={files:{[FN]:{content:JSON.stringify({t:TS,k:[...S]})}}};
+  if(GID)await api("/gists/"+GID,{method:"PATCH",body:JSON.stringify(body)});
+  else{const g=await api("/gists",{method:"POST",body:JSON.stringify({description:"CCNA roadmap progress",public:false,...body})});GID=g.id;stash()}
+  setST("ذخیره شد ✓ "+new Date().toLocaleTimeString("fa-IR",{hour:"2-digit",minute:"2-digit"}))}catch(e){setST("خطا در ذخیره ("+e.message+")")}}
+async function pull(){if(!TOK)return;setST("در حال همگام‌سازی…");
+ try{if(!GID){const l=await api("/gists?per_page=100"),g=l.find(x=>x.files&&x.files[FN]);if(g){GID=g.id;stash()}}
+  if(GID){const g=await api("/gists/"+GID),d=JSON.parse(g.files[FN].content);
+   if(d.t>TS){S=new Set(d.k);TS=d.t;save(1);render();setST("همگام شد ✓");return}}
+  await push()}catch(e){setST("خطا در همگام‌سازی ("+e.message+")")}}
+let tm;const later=()=>{if(!TOK)return;clearTimeout(tm);tm=setTimeout(push,900)};
+const key=(w,j,k)=>w+"-"+j+"-"+k;
+function T(w,j){const x=W[w].d[j],A=["Anki، یادداشت و ثبت واژگان",15];
+ if(j<5)return[[x[1],75],[x[2],30],A];
+ if(j==5)return[["آماده‌سازی: مرور Anki و طراحی Lab روی کاغذ",30],[x[1],120],["مستندسازی: README، اسکرین‌شات و commit در GitHub",30]];
+ return[[x[1],40],["بافر: جبران عقب‌افتادگی یا مرور Anki",20]]}
+function ws(w){let a=0,b=0;for(let j=0;j<7;j++)T(w,j).forEach((t,k)=>{b+=t[1];if(S.has(key(w,j,k)))a+=t[1]});return[a,b]}
+const pc=(a,b)=>Math.round(a/b*100);
+function nav(c){return'<nav><a href="#/" class="'+(c==0?"on":"")+'">خانه</a>'+W.map((_,i)=>{const[a,b]=ws(i);return'<a href="#/'+(i+1)+'" class="'+(c==i+1?"on ":"")+(a==b?"ok":"")+'">'+fa(i+1)+'</a>'}).join("")+'<span class="ss">'+ST+'</span></nav>'}
+function home(){let A=0,B=0;W.forEach((_,i)=>{const[a,b]=ws(i);A+=a;B+=b});const p=pc(A,B);
+const st=[["یادگیری","ویدئو با سرعت 1x؛ برای هر کلمه‌ی ناشناخته pause نکن."],["Lab همان روز","هر مفهوم را همان روز در Packet Tracer یا ترمینال اجرا کن."],["کتاب","بعد از Lab، فقط بخش مربوط را بخوان (Acing the CCNA)."],["بازیابی فعال","Anki و توضیح شفاهی بدون جزوه؛ مرور فاصله‌دار."]];
+const rs=[["<a href='https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ' target='_blank' rel='noopener'>Jeremy's IT Lab: CCNA 200-301 Complete Course ↗</a>","پلی‌لیست رایگان یوتیوب: Day 1 تا 63 و Mega Lab؛ منبع اصلی ویدئویی."],["Acing the CCNA Exam ج۱ و ج۲ (Jeremy McDowell، Manning)","کتاب همراه؛ فصل‌ها تقریباً یک‌به‌یک با Dayها. همیشه بعد از Lab."],["<a href='https://linuxcommand.org' target='_blank' rel='noopener'>The Linux Command Line (Shotts) ↗</a>","رایگان؛ شماره‌ی فصل‌ها را با نسخه‌ی خودت تطبیق بده."],["<a href='https://overthewire.org/wargames/bandit/' target='_blank' rel='noopener'>OverTheWire Bandit ↗</a>","Level 0 تا 33 به‌صورت هفتگی."],["<a href='https://www.wireshark.org/docs/' target='_blank' rel='noopener'>Wireshark Docs ↗</a> و Chris Greer","تحلیل ترافیک."],["<a href='https://nmap.org/book/' target='_blank' rel='noopener'>Nmap Network Scanning ↗</a>","فقط روی شبکه‌ی خودت."]];
+return'<section class="hero"><div class="hin"><div class="tt"><h1>مسیر ۱۴ هفته‌ای <b>CCNA + Linux</b></h1><div class="sub">Networking · Linux · Security-Oriented Foundations</div><p>هر هفته حدود ۱۴ ساعت (روزی ۲ ساعت)، با Lab و مرور فعال. روی هر هفته بزن و تسک‌ها را تیک بزن.</p></div><div class="ring" style="--p:'+p+'"><div><b>'+fa(p)+'٪</b><small>'+fa((A/60).toFixed(1))+' از '+fa(Math.round(B/60))+' ساعت</small></div></div></div></section><main class="home"><div class="cards">'+st.map((s,i)=>'<div class="box st"><b><i>'+fa(i+1)+'</i>'+s[0]+'</b><span>'+s[1]+'</span></div>').join("")+'</div><h2>هفته‌ها</h2><div class="cards">'+W.map((x,i)=>{const[a,b]=ws(i),q=pc(a,b);return'<a class="wk" href="#/'+(i+1)+'" style="--c:'+CL[i][0]+';--c2:'+CL[i][1]+'"><div class="h"><span>هفته '+fa(i+1)+'</span><span>'+fa(q)+'٪</span></div><div class="b"><strong>'+x.n+'</strong><bdi>'+x.e+'</bdi><div class="pb"><s style="width:'+q+'%"></s></div></div></a>'}).join("")+'</div><h2>منابع</h2><div class="cards">'+rs.map(r=>'<div class="box"><b>'+r[0]+'</b><span>'+r[1]+'</span></div>').join("")+'</div><h2>قانون‌ها</h2><div class="cards"><div class="box"><b>انگلیسی</b><span>کلمه را یک‌بار دیدی، رد شو. چندبار دیدی و نفهمیدی، ترجمه کن. تخصصی بود، در واژه‌نامه ثبت کن.</span></div><div class="box"><b>مفهوم سخت شد؟</b><span>همان‌جا بمان (تا یک هفته اضافه). برنامه برای تو ساخته شده، نه تو برای برنامه.</span></div><div class="box"><b>موضوع جذاب دیگر؟</b><span>فقط اسمش را در later.md بنویس و برگرد.</span></div><div class="box"><b>Dayهای موکول‌شده</b><span>Day 25 (RIP و EIGRP) و بخش‌های اضافه‌ی v1.1 (Root/Loop Guard، AI & ML، Containers، VRF) فعلاً حذف‌اند؛ آخر مسیر اگر وقت بود.</span></div><div class="box"><b>آزمون CCNA (اختیاری)</b><span>CCNA v2.0 از ۳ فوریه ۲۰۲۷ فعال می‌شود. برای آزمون، هفته‌ی آزمون‌های تمرینی جدا اضافه کن.</span></div></div><h2>همگام‌سازی و پشتیبان</h2><div class="box syn"><p>'+(TOK?"به GitHub Gist متصل است؛ تیک‌ها خودکار روی همه‌ی دستگاه‌ها همگام می‌شوند.":"برای همگام‌سازی روی همه‌ی دستگاه‌ها، GitHub Token را یک‌بار وارد کن (Token فقط در همین مرورگر می‌ماند).")+'</p>'+(TOK?'':'<input id="tk" type="password" placeholder="ghp_..." autocomplete="off">')+'<div class="bt">'+(TOK?'<button id="sn">همگام‌سازی حالا</button><button id="dc">قطع اتصال</button>':'<button id="cn">اتصال و همگام‌سازی</button>')+'</div><div class="bt"><button id="ex">خروجی فایل پشتیبان</button><label class="fl">بازگردانی از فایل<input id="im" type="file" accept=".json" hidden></label></div><small class="ss">'+ST+'</small></div><button class="rs" id="rs">پاک‌کردن پیشرفت</button></main>'}
+function week(i){const x=W[i],[a,b]=ws(i),p=pc(a,b);
+return'<div style="--c:'+CL[i][0]+';--c2:'+CL[i][1]+'"><section class="wh"><div class="wi"><small>هفته '+fa(i+1)+' از '+fa(W.length)+'</small><h1>'+x.n+'</h1><bdi>'+x.e+'</bdi><div class="pb"><s style="width:'+p+'%"></s></div><span>'+fa(p)+'٪ · '+fa((a/60).toFixed(1))+' از ۱۴ ساعت</span><div class="goal">هدف هفته: '+x.g+'</div></div></section><div class="grid">'+DN.map((d,j)=>{const t=T(i,j),all=t.every((_,k)=>S.has(key(i,j,k))),m=t.reduce((s,q)=>s+q[1],0);
+return'<article class="day'+(all?" done":"")+'"><div class="dh"><div><h3>'+d+'</h3><small>'+x.d[j][0]+'</small></div><div class="tm">'+(all?"✓ ":"")+fa(m/60)+' ساعت</div></div>'+t.map((q,k)=>'<label class="tk"><input type="checkbox" data-k="'+key(i,j,k)+'"'+(S.has(key(i,j,k))?" checked":"")+'><span>'+q[0]+'</span><em>'+fa(q[1])+' د</em></label>').join("")+'</article>'}).join("")+'</div><div class="pn">'+(i?'<a href="#/'+i+'">هفته '+fa(i)+'</a>':'<span></span>')+(i<W.length-1?'<a href="#/'+(i+2)+'">هفته '+fa(i+2)+'</a>':'<a href="#/">بازگشت به خانه</a>')+'</div></div>'}
+function render(){const m=location.hash.match(/#\/(\d+)/),n=m?+m[1]:0;app.innerHTML=nav(n)+(n>=1&&n<=W.length?week(n-1):home())}
+addEventListener("hashchange",()=>{render();scrollTo(0,0)});
+app.addEventListener("change",e=>{const t=e.target,k=t.dataset&&t.dataset.k;if(!k)return;t.checked?S.add(k):S.delete(k);save();later();render();const n=app.querySelector('[data-k="'+k+'"]');if(n)n.focus()});
+let armed=false;
+app.addEventListener("click",e=>{if(e.target.id!=="rs")return;if(!armed){armed=true;e.target.textContent="مطمئنی؟ دوباره بزن";return}S=new Set();save();later();armed=false;render()});
+app.addEventListener("click",async e=>{const id=e.target.id;
+ if(id==="cn"){const v=document.getElementById("tk").value.trim();if(!v)return;TOK=v;try{localStorage.setItem("c14tok",v)}catch(x){}await pull();render()}
+ if(id==="sn"){await pull()}
+ if(id==="dc"){TOK="";GID="";try{localStorage.removeItem("c14tok");localStorage.removeItem("c14gid")}catch(x){}setST("");render()}
+ if(id==="ex"){const b=new Blob([JSON.stringify({t:TS,k:[...S]})],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="c14-progress.json";a.click()}});
+app.addEventListener("change",e=>{if(e.target.id!=="im")return;const f=e.target.files[0];if(!f)return;f.text().then(t=>{const d=JSON.parse(t);S=new Set(d.k);save();later();render();setST("بازگردانی شد ✓")}).catch(()=>setST("فایل نامعتبر است"))});
+render();pull();
+</script>
+</body>
+</html>
